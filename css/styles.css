@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    color: white;
+    font-size: 16px;
+}
+
+section {
+    margin: 2rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    color: white;
+    font-size: clamp(1.5rem, 5vw, 5rem);
+    font-weight: bold;
+    line-height: 1.5;
+    flex-wrap: wrap;
+    max-width: 100vw;
+    align-items: center;
+    background: transparent;
+    outline: 1px solid black;
+}
+
+.content p {
+    display: inline-block;
+    background: black;
+    max-width: fit-content;
+    height: min-content;
+    line-height: clamp(1, 1.3, 2);
+    padding-right: 1rem;
+    flex-grow: 1;
+    outline: 1px solid black;
+}
+
+.span-container {
+    display: flex;
+    flex-direction: column;
+    height: clamp(2rem, 6vw, 8rem);
+    line-height: clamp(1, 1.3, 2);
+    flex-grow: 1;
+    width: clamp(1rem, 10vw, 20rem);
+    outline: 4px solid black;
+}
+
+.span-extra {
+    height: clamp(1vw, 1.5vw, 2vw);
+    background: black;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.span-container + p {
+    padding-left: 1rem;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    clip-path: inset(0);
+    z-index: -2;
+}
+
+#bg-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.span-box {
+    display: block;
+    height: clamp(1rem, 4vw, 6rem);
+    vertical-align: middle;
+    z-index: 3;
+    flex-grow: 1;
+    mix-blend-mode: overlay;
+}
+
+.span-box-1 {
+    width: clamp(2rem, 7rem, 17rem);
+}
+
+.span-box-2 {
+    width: clamp(2rem, 13vw, 13rem);
+}
+
+.span-box-3 {
+    width: clamp(2rem, 20vw, 13rem);
+}
+
+.span-box-4, .span-container-4 {
+    width: clamp(2rem, 25vw, 20rem);
+}
